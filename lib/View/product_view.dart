@@ -47,7 +47,7 @@ class _ProductViewState extends State<ProductView> {
                     const Spacer(),
                     Text(
                       "Men’s Shoes",
-                      style: textStyle4,
+                      style: textStyle3,
                     ),
                     const Spacer(),
                     Bounce(
