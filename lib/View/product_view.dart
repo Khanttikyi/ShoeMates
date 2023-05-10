@@ -20,7 +20,7 @@ class _ProductViewState extends State<ProductView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bgWhite,
+      backgroundColor: bgBlack,
       body: SizedBox(
         width: double.infinity,
         height: double.infinity,
@@ -89,7 +89,7 @@ class _ProductViewState extends State<ProductView> {
                 Container(
                   width: double.infinity,
                   decoration: const BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.black,
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(24.0),
                           topRight: Radius.circular(24.0))),
@@ -100,21 +100,21 @@ class _ProductViewState extends State<ProductView> {
                       children: [
                         Text(
                           "BEST SELLER",
-                          style: textStyle5,
+                          style: textStyle3,
                         ),
                         const SizedBox(
                           height: 5.0,
                         ),
                         Text(
                           "Nike Air Jordan",
-                          style: textStyle4,
+                          style: textStyle3,
                         ),
                         const SizedBox(
                           height: 5.0,
                         ),
                         Text(
                           "\$ 967.800",
-                          style: textStyle4,
+                          style: textStyle3,
                         ),
                         const SizedBox(
                           height: 5.0,
@@ -128,7 +128,7 @@ class _ProductViewState extends State<ProductView> {
                         ),
                         Text(
                           "Gallery",
-                          style: textStyle4,
+                          style: textStyle3,
                         ),
                         const SizedBox(
                           height: 15.0,
@@ -148,7 +148,7 @@ class _ProductViewState extends State<ProductView> {
                                   height: 56.0,
                                   decoration: BoxDecoration(
                                       color: selectShows == 0
-                                          ? customBlue
+                                          ? customPurple
                                           : bgWhite,
                                       borderRadius:
                                           BorderRadius.circular(16.0)),
@@ -169,7 +169,7 @@ class _ProductViewState extends State<ProductView> {
                                   height: 56.0,
                                   decoration: BoxDecoration(
                                       color: selectShows == 1
-                                          ? customBlue
+                                          ? customPurple
                                           : bgWhite,
                                       borderRadius:
                                           BorderRadius.circular(16.0)),
@@ -190,7 +190,7 @@ class _ProductViewState extends State<ProductView> {
                                   height: 56.0,
                                   decoration: BoxDecoration(
                                       color: selectShows == 2
-                                          ? customBlue
+                                          ? customPurple
                                           : bgWhite,
                                       borderRadius:
                                           BorderRadius.circular(16.0)),
@@ -207,7 +207,7 @@ class _ProductViewState extends State<ProductView> {
                           children: [
                             Text(
                               "Size",
-                              style: textStyle4,
+                              style: textStyle3,
                             ),
                             const Spacer(),
                             Bounce(
@@ -219,7 +219,7 @@ class _ProductViewState extends State<ProductView> {
                                 child: Text(
                                   "EU",
                                   style: countryIndext == 0
-                                      ? textStyle4
+                                      ? textStyle3
                                       : textStyle5,
                                 )),
                             const SizedBox(
@@ -234,7 +234,7 @@ class _ProductViewState extends State<ProductView> {
                                 child: Text(
                                   "US",
                                   style: countryIndext == 1
-                                      ? textStyle4
+                                      ? textStyle3
                                       : textStyle5,
                                 )),
                             const SizedBox(
@@ -248,7 +248,7 @@ class _ProductViewState extends State<ProductView> {
                                 duration: const Duration(milliseconds: 200),
                                 child: Text("UK",
                                     style: countryIndext == 2
-                                        ? textStyle4
+                                        ? textStyle3
                                         : textStyle5))
                           ],
                         ),
@@ -267,7 +267,7 @@ class _ProductViewState extends State<ProductView> {
                               child: CircleAvatar(
                                 radius: 18,
                                 backgroundColor:
-                                    sizeIndex == 0 ? customBlue : bgWhite,
+                                    sizeIndex == 0 ? customPurple : bgWhite,
                                 child: Text(
                                   "38",
                                   style:
@@ -284,7 +284,7 @@ class _ProductViewState extends State<ProductView> {
                               child: CircleAvatar(
                                 radius: 18,
                                 backgroundColor:
-                                    sizeIndex == 1 ? customBlue : bgWhite,
+                                    sizeIndex == 1 ? customPurple : bgWhite,
                                 child: Text(
                                   "39",
                                   style:
@@ -301,7 +301,7 @@ class _ProductViewState extends State<ProductView> {
                               child: CircleAvatar(
                                 radius: 18,
                                 backgroundColor:
-                                    sizeIndex == 2 ? customBlue : bgWhite,
+                                    sizeIndex == 2 ? customPurple : bgWhite,
                                 child: Text(
                                   "40",
                                   style:
@@ -318,7 +318,7 @@ class _ProductViewState extends State<ProductView> {
                               child: CircleAvatar(
                                 radius: 18,
                                 backgroundColor:
-                                    sizeIndex == 3 ? customBlue : bgWhite,
+                                    sizeIndex == 3 ? customPurple : bgWhite,
                                 child: Text(
                                   "41",
                                   style:
@@ -335,7 +335,7 @@ class _ProductViewState extends State<ProductView> {
                               child: CircleAvatar(
                                 radius: 18,
                                 backgroundColor:
-                                    sizeIndex == 4 ? customBlue : bgWhite,
+                                    sizeIndex == 4 ? customPurple : bgWhite,
                                 child: Text(
                                   "41",
                                   style:
@@ -352,7 +352,7 @@ class _ProductViewState extends State<ProductView> {
                               child: CircleAvatar(
                                 radius: 18,
                                 backgroundColor:
-                                    sizeIndex == 5 ? customBlue : bgWhite,
+                                    sizeIndex == 5 ? customPurple : bgWhite,
                                 child: Text(
                                   "41",
                                   style:
@@ -373,9 +373,9 @@ class _ProductViewState extends State<ProductView> {
       ),
       bottomNavigationBar: Container(
         width: double.infinity,
-        height: 70.0,
+        height: 80.0,
         decoration: BoxDecoration(
-            color: Colors.white,
+            color: Colors.black,
             borderRadius: const BorderRadius.only(
                 topRight: Radius.circular(24.0),
                 topLeft: Radius.circular(24.0)),
@@ -383,11 +383,11 @@ class _ProductViewState extends State<ProductView> {
               BoxShadow(
                 spreadRadius: 0.1,
                 blurRadius: 25,
-                color: bgWhite,
+                color: customBlack,
               )
             ]),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(12.0),
           child: Row(
             children: [
               const SizedBox(
@@ -403,7 +403,7 @@ class _ProductViewState extends State<ProductView> {
                   ),
                   Text(
                     "\$ 849.96",
-                    style: textStyle4,
+                    style: textStyle3,
                   ),
                 ],
               ),
@@ -416,13 +416,13 @@ class _ProductViewState extends State<ProductView> {
                   height: 55.0,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                      color: customBlue,
+                      color: Colors.indigo,
                       borderRadius: BorderRadius.circular(50.0),
                       boxShadow: [
                         BoxShadow(
                           spreadRadius: 1,
                           blurRadius: 5,
-                          color: customBlue,
+                          color: Colors.indigo,
                         )
                       ]),
                   child: const Text(

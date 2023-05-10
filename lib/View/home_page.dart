@@ -1,5 +1,9 @@
 // ignore_for_file: depend_on_referenced_packages
 
+import 'package:Shoe_Mates/View/favourite_screen.dart';
+import 'package:Shoe_Mates/View/product_view.dart';
+import 'package:Shoe_Mates/View/profile.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounce/flutter_bounce.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
@@ -83,6 +87,30 @@ class _HomePageState extends State<HomePage> {
                       ],
                     ),
                     const Spacer(),
+                    Bounce(
+                      onPressed: () {},
+                      duration: const Duration(milliseconds: 500),
+                      child: Stack(
+                        children: [
+                          Image.asset(
+                            "assets/icons/cart_ic.png",
+                            width: 44.0,
+                            height: 44.0,
+                          ),
+                          Positioned(
+                            right: 0,
+                            top: 5,
+                            child: Container(
+                              width: 10.0,
+                              height: 10.0,
+                              decoration: BoxDecoration(
+                                  color: Colors.deepOrange,
+                                  borderRadius: BorderRadius.circular(100.0)),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 )
                 // Text("HOME"),
@@ -94,171 +122,169 @@ class _HomePageState extends State<HomePage> {
         width: double.infinity,
         height: double.infinity,
         color: bgBlack,
-        //  decoration:const BoxDecoration(
-        //           image: DecorationImage(
-        //             image: AssetImage("assets/backgrounds/background.jpeg"),
-        //             fit: BoxFit.cover,
-        //             opacity: 1,
-        //           ),
-        //         ),
         child: Padding(
           padding: const EdgeInsets.only(top: 10.0, left: 20.0, right: 20.0),
           child: Expanded(
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      const SizedBox(
-                        height: 20.0,
-                      ),
-                      SizedBox(
-                          width: double.infinity,
-                          height: 48.0,
-                          child: TextFormField(
-                            cursorColor: customPurple,
-                            cursorWidth: 2.5,
-                            style: textStyle1,
-                            decoration: InputDecoration(
-                              fillColor: Colors.white,
-                              filled: true,
-                              contentPadding: EdgeInsets.zero,
-                              hintText: "Looking for shopping",
-                              prefixIcon: Padding(
-                                padding: const EdgeInsets.all(15.0),
-                                child:
-                                    Image.asset("assets/icons/search_ic.png"),
-                              ),
-                              hintStyle: textStyle1,
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
-                                  color: Colors.white,
-                                ),
-                                borderRadius: BorderRadius.circular(100.0),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: const BorderSide(
-                                  color: Colors.white,
-                                ),
-                                borderRadius: BorderRadius.circular(100.0),
-                              ),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  const SizedBox(
+                    height: 20.0,
+                  ),
+                  SizedBox(
+                      width: double.infinity,
+                      height: 48.0,
+                      child: TextFormField(
+                        cursorColor: customPurple,
+                        cursorWidth: 2.5,
+                        style: textStyle1,
+                        decoration: InputDecoration(
+                          fillColor: Colors.white,
+                          filled: true,
+                          contentPadding: EdgeInsets.zero,
+                          hintText: "Looking for shopping",
+                          prefixIcon: Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Image.asset("assets/icons/search_ic.png"),
+                          ),
+                          hintStyle: textStyle1,
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(
+                              color: Colors.white,
                             ),
-                          )),
-                      const SizedBox(
-                        height: 20.0,
-                      ),
-                      const SizedBox(
-                        width: double.infinity,
-                        height: 50.0,
-                        child: Brands(),
-                      ),
-                      const SizedBox(
-                        height: 10.0,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Popular Shows",
-                            style: textStyle3,
+                            borderRadius: BorderRadius.circular(100.0),
                           ),
-                          TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                "See all",
-                                style: textStyle5,
-                              ))
-                        ],
-                      ),
-                      SizedBox(
-                        height: 200.0,
-                        child: ListView.builder(
-                            itemCount: 10,
-                            scrollDirection: Axis.horizontal,
-                            padding: EdgeInsets.zero,
-                            itemBuilder: (context, index) {
-                              return ItemView(
-                                currentIndex: index,
-                              );
-                            }),
-                      ),
-                      const SizedBox(
-                        height: 10.0,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "New Arrivals",
-                            style: textStyle3,
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: const BorderSide(
+                              color: Colors.white,
+                            ),
+                            borderRadius: BorderRadius.circular(100.0),
                           ),
-                          TextButton(
-                              onPressed: () {},
-                              child: Text(
-                                "See all",
-                                style: textStyle5,
-                              ))
-                        ],
+                        ),
+                      )),
+                  const SizedBox(
+                    height: 20.0,
+                  ),
+                  const SizedBox(
+                    width: double.infinity,
+                    height: 50.0,
+                    child: Brands(),
+                  ),
+                  const SizedBox(
+                    height: 10.0,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Popular Shows",
+                        style: textStyle3,
                       ),
-                      Column(
-                        children: [
-                          for (int i = 0; i < 5; i++)
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 5.0),
-                              child: InkWell(
-                                onTap: () {},
-                                child: Container(
-                                  width: double.infinity,
-                                  height: 120,
-                                  decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(16.0),
-                                      color: Colors.white),
-                                  child: Row(
-                                    children: [
-                                      Expanded(
-                                          child: Padding(
-                                        padding: const EdgeInsets.all(20.0),
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Text(
-                                              "BEST CHOISE",
-                                              style: textStyle6,
-                                            ),
-                                            const SizedBox(
-                                              height: 5,
-                                            ),
-                                            Text(
-                                              "Nike Air Jordan",
-                                              style: textStyle4,
-                                            ),
-                                            const SizedBox(
-                                              height: 10,
-                                            ),
-                                            Text(
-                                              "\$ 849.69",
-                                              style: textStyle4,
-                                            ),
-                                          ],
-                                        ),
-                                      )),
-                                      Expanded(
-                                          child: Image.asset(
-                                        "assets/shows/img1.png",
-                                        width: double.infinity,
-                                        height: double.infinity,
-                                        fit: BoxFit.cover,
-                                      )),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            )
-                        ],
-                      )
+                      TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            "See all",
+                            style: textStyle5,
+                          ))
                     ],
                   ),
-                ),
+                  SizedBox(
+                    height: 200.0,
+                    child: ListView.builder(
+                        itemCount: 10,
+                        scrollDirection: Axis.horizontal,
+                        padding: EdgeInsets.zero,
+                        itemBuilder: (context, index) {
+                          return ItemView(
+                            currentIndex: index,
+                          );
+                        }),
+                  ),
+                  const SizedBox(
+                    height: 10.0,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "New Arrivals",
+                        style: textStyle3,
+                      ),
+                      TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            "See all",
+                            style: textStyle5,
+                          ))
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      for (int i = 0; i < 5; i++)
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 5.0),
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  CupertinoPageRoute(
+                                      builder: (context) =>
+                                          const ProductView()));
+                            },
+                            child: Container(
+                              width: double.infinity,
+                              height: 120,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(16.0),
+                                  color: Colors.white),
+                              child: Row(
+                                children: [
+                                  Expanded(
+                                      child: Padding(
+                                    padding: const EdgeInsets.all(20.0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          "BEST CHOISE",
+                                          style: textStyle6,
+                                        ),
+                                        const SizedBox(
+                                          height: 5,
+                                        ),
+                                        Text(
+                                          "Nike Air Jordan",
+                                          style: textStyle4,
+                                        ),
+                                        const SizedBox(
+                                          height: 10,
+                                        ),
+                                        Text(
+                                          "\$ 849.69",
+                                          style: textStyle4,
+                                        ),
+                                      ],
+                                    ),
+                                  )),
+                                  Expanded(
+                                      child: Image.asset(
+                                    "assets/shows/img1.png",
+                                    width: double.infinity,
+                                    height: double.infinity,
+                                    fit: BoxFit.cover,
+                                  )),
+                                ],
+                              ),
+                            ),
+                          ),
+                        )
+                    ],
+                  )
+                ],
               ),
+            ),
+          ),
         ),
       ),
       resizeToAvoidBottomInset: false,
@@ -309,6 +335,7 @@ class _HomePageState extends State<HomePage> {
                       context,
                       MaterialPageRoute(builder: (context) => const HomePage()),
                     );
+                   
                   },
                   child: Image.asset("assets/icons/home_ic.png",
                       width: 25,
@@ -318,6 +345,11 @@ class _HomePageState extends State<HomePage> {
                 InkWell(
                   onTap: () {
                     navigationIndex = 1;
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const FavouriteScreen()),
+                    );
                   },
                   child: Image.asset("assets/icons/favourite_ic.png",
                       width: 25,
@@ -330,6 +362,11 @@ class _HomePageState extends State<HomePage> {
                 InkWell(
                   onTap: () {
                     navigationIndex = 2;
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const FavouriteScreen()),
+                    );
                   },
                   child: Image.asset("assets/icons/notify_ic.png",
                       width: 25,
@@ -339,6 +376,11 @@ class _HomePageState extends State<HomePage> {
                 InkWell(
                   onTap: () {
                     navigationIndex = 3;
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ProfileScreen()),
+                    );
                   },
                   child: Image.asset("assets/icons/user_ic.png",
                       width: 25,

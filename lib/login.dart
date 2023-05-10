@@ -204,6 +204,7 @@ class _LoginPageState extends State<LoginPage> {
     // if (_usernameController.value.text == 'admin' &&
     //     _passwordController.value.text == 'bs123456') {
     Navigator.push(context, MaterialPageRoute(builder: (_) => Home()));
+    // Navigator.pushNamed(context, '/home');
     setState(() {
       isValid = true;
     });

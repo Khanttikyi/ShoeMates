@@ -27,7 +27,7 @@ TextStyle textStyle7 = TextStyle(
 
 TextStyle textStyle3 = const TextStyle(
     color: Colors.white,
-    fontSize: 14.0,
+    fontSize: 15.0,
     fontWeight: FontWeight.w600,
     fontFamily: "airbnb");
 

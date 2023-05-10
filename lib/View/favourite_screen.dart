@@ -11,7 +11,7 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color(0xffF8F9FA),
+        backgroundColor: Colors.black,
         body: Column(children: [
           const SizedBox(
             height: 50,
@@ -29,7 +29,7 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
                     width: 45,
                     height: 45,
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.black,
                       borderRadius: BorderRadius.circular(30.0),
                       image: const DecorationImage(
                         image: AssetImage("assets/icons/back_ic.png"),
@@ -41,7 +41,7 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
                 const Text(
                   'Favourite',
                   style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontSize: 16,
                       fontWeight: FontWeight.w500),
                 ),
