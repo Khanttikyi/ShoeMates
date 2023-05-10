@@ -3,7 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bounce/flutter_bounce.dart';
-import 'package:shop_app/View/product_view.dart';
+import 'package:Shoe_Mates/View/product_view.dart';
 
 import '../Styles/color.dart';
 import '../Styles/font_styles.dart';

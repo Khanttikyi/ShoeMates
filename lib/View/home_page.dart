@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bounce/flutter_bounce.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
-import 'package:shop_app/Styles/font_styles.dart';
+import 'package:Shoe_Mates/Styles/font_styles.dart';
 import '../Styles/color.dart';
 import 'brands.dart';
 import 'item_view.dart';

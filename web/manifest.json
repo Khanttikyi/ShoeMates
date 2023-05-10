@@ -1,6 +1,6 @@
 {
-    "name": "shop_app",
-    "short_name": "shop_app",
+    "name": "Shoe_Mates",
+    "short_name": "Shoe_Mates",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

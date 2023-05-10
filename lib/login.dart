@@ -5,7 +5,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
 import 'package:flutter/material.dart';
-import 'package:shop_app/View/home_page.dart';
+import 'package:Shoe_Mates/View/home_page.dart';
 
 class Login extends StatelessWidget {
   const Login({Key? key}) : super(key: key);

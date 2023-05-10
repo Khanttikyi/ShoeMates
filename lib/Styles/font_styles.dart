@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shop_app/Styles/color.dart';
+import 'package:Shoe_Mates/Styles/color.dart';
 
 TextStyle textStyle1 = TextStyle(
     color: customGrey,

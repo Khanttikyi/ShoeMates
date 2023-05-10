@@ -1,4 +1,4 @@
-# shop_app
+# Shoe_Mates
 
 A new Flutter project.
 

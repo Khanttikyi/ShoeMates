@@ -1,9 +1,9 @@
 // ignore_for_file: depend_on_referenced_packages
 
 import 'package:flutter/material.dart';
-import 'package:shop_app/Styles/color.dart';
+import 'package:Shoe_Mates/Styles/color.dart';
 import 'package:flutter_bounce/flutter_bounce.dart';
-import 'package:shop_app/Styles/font_styles.dart';
+import 'package:Shoe_Mates/Styles/font_styles.dart';
 
 class ProductView extends StatefulWidget {
   const ProductView({Key? key}) : super(key: key);
