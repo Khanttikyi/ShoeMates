@@ -1,6 +1,7 @@
 import 'package:Shoe_Mates/Styles/color.dart';
 import 'package:Shoe_Mates/View/favourite_screen.dart';
 import 'package:Shoe_Mates/View/home_page.dart';
+import 'package:Shoe_Mates/login.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -227,8 +228,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               ),
                             ),
                           ),
-                          onPressed: () {},
-                          child: const Text('UPDATE'),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Login()),
+                            );
+                          },
+                          child: const Text('LOG OUT'),
                         ),
                       )
                     ],
@@ -242,13 +249,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
         bottomNavigationBar: Container(
           width: double.infinity,
           height: 72,
-          decoration: const BoxDecoration(
-            color: Colors.black
-              ),
+          decoration: const BoxDecoration(color: Colors.black),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -280,7 +284,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         height: 25,
                         color: navigationIndex == 1 ? bgWhite : customGrey),
                   ),
-                 
                   InkWell(
                     onTap: () {
                       navigationIndex = 2;
@@ -298,12 +301,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   InkWell(
                     onTap: () {
                       navigationIndex = 3;
-                      
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => ProfileScreen()),
-                        );
+
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ProfileScreen()),
+                      );
                     },
                     child: Image.asset("assets/icons/user_ic.png",
                         width: 25,
