@@ -23,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
         _controller.play();
         setState(() {});
       });
-    Timer(const Duration(seconds: 10), () {
+    Timer(const Duration(seconds: 25), () {
       Navigator.pushReplacement(
           context, CupertinoPageRoute(builder: (context) => const Login()));
     });
@@ -65,24 +65,33 @@ class _SplashScreenState extends State<SplashScreen> {
           //     textAlign: TextAlign.center,),
           //   ),
           // ),
-           Positioned(
+          Positioned(
             // Widget fixed to the bottom
             left: 0,
             bottom: 5,
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              height: 50,
-              color: Color.fromARGB(162, 214, 215, 217),
-              child: Center(
-               child: Text(
-                "SOLEMATES",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontFamily: "airbnb",
-                    letterSpacing: 7.0,
-                    fontSize: 28.0,
-                    fontWeight: FontWeight.bold),
-              textAlign: TextAlign.center,),
+            child: InkWell(
+              onTap: () {
+                Navigator.push(
+                    context,
+                    CupertinoPageRoute(
+                        builder: (context) => const Login()));
+              },
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: 50,
+                color: Color.fromARGB(162, 214, 215, 217),
+                child: Center(
+                  child: Text(
+                    "SOLEMATES",
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontFamily: "airbnb",
+                        letterSpacing: 7.0,
+                        fontSize: 28.0,
+                        fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
               ),
             ),
           ),
